@@ -3,20 +3,25 @@ import Profile from "@/components/Profile";
 
 const profile = {
   name: "김가은",
-  bio: "저는 기욤둥이입니닼ㅋ",
+  bio: "저는 기염둥이입니다 | 피자 땡긴다",
+  imageUrl: "/profile.png",
 };
 
 const links = [
-  { title: "GitHub", href: "https://github.com/" },
-  { title: "LinkedIn", href: "https://www.linkedin.com/" },
-  { title: "Blog", href: "https://example.com/" },
+  { title: "🧜🏻‍♀️ 깃허브", href: "https://github.com/kxxgani" },
+  { title: "🤓 블로그", href: "https://blog.naver.com/gage0527" },
+  { title: "📬 이메일", href: "mailto:gage0527@naver.com" },
 ];
 
 export default function Home() {
   return (
-    <main className="mx-auto flex w-full max-w-md flex-1 flex-col items-center px-6 py-16">
-      <Profile name={profile.name} bio={profile.bio} />
-      <ul className="mt-10 flex w-full flex-col gap-4">
+    <main className="mx-auto flex w-full max-w-md flex-1 flex-col items-center px-7 py-16 sm:px-8 sm:py-24">
+      <Profile
+        name={profile.name}
+        bio={profile.bio}
+        imageUrl={profile.imageUrl}
+      />
+      <ul className="mt-12 flex w-full flex-col gap-5">
         {links.map((link) => (
           <li key={link.title}>
             <LinkCard title={link.title} href={link.href} />
